@@ -44,6 +44,4 @@ export const tasksSlice = createSlice({
 
 export const { addTask, setDraggingStatus, taskStatusUpdate, removeTask } = tasksSlice.actions;
 
-// export const selectData = (state:any) => state.tasks.data;
-
 export default tasksSlice.reducer;
