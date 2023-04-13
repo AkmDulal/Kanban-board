@@ -1,0 +1,185 @@
+@import 'react-toastify/dist/ReactToastify.css';
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.addTask {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.addTask>input,
+.addTask>button {
+  border: 1px solid #2222;
+  background-color: transparent;
+  font-size: 14px;
+  color: #222;
+}
+
+.addTask>input {
+  height: 40px;
+  width: 300px;
+  padding-left: 8px;
+  outline: none;
+}
+
+.addTask>button {
+  padding: 10px 50px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #FF6347;
+}
+
+.addTask>button:active {
+  background-color: #FF6347;
+  color: black;
+}
+
+.containers {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .containers {
+    padding: 0px 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .addTask {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addTask>input,
+  .addTask>button {
+    font-size: 14px;
+  }
+
+  .addTask>input {
+    height: 36px;
+    width: 250px;
+  }
+
+  .addTask>button {
+    margin: 20px 0px 0px;
+  }
+}
+
+
+
+.taskCard {
+  padding: 10px;
+  width: 90%;
+  background-color: #ebebeb;
+  box-sizing: border-box;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid #2222;
+  cursor: grab;
+  position: relative;
+  animation: _fadeIn_10t16_1 .3s ease-in-out;
+  color: #222;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+
+.taskCard:hover span {
+  display: block;
+}
+
+.taskCard span {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  cursor: pointer;
+  display: none;
+}
+
+.taskCard span:hover {
+  color: red;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.taskContainer {
+  height: 67vh;
+  border: 1px solid #2222;
+  overflow: hidden;
+}
+
+.dragging {
+  border: 2px dotted black;
+  background: lightgray;
+}
+
+.taskContainer>.status {
+  margin: 0;
+  padding: 10px;
+  height: 30px;
+  background-color: #FF6347;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
